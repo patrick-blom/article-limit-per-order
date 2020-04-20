@@ -1,0 +1,36 @@
+{
+  "name": "patrick-blom/article-limit-per-order",
+  "description": "This is a module for the OXID eShop which makes it possible to limit the number of articles per order (budgetary quantities)",
+  "type": "oxideshop-module",
+  "keywords": [
+    "oxid",
+    "modules",
+    "eShop",
+    "articles",
+    "order",
+    "limit",
+    "budgetary quantities"
+  ],
+  "homepage": "https://www.patrick-blom.de/",
+  "version": "1.0",
+  "license": [
+    "GPL-3.0-only"
+  ],
+  "extra": {
+    "oxideshop": {
+      "blacklist-filter": [
+        "documentation/**/*.*",
+        "config.inc.TEST.php.dist"
+      ],
+      "target-directory": "pb/ArticleLimitPerOrder"
+    }
+  },
+  "require": {
+    "php": ">=7.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "PaBlo\\ArticleLimitPerOrder\\": "../../../source/modules/pb/ArticleLimitPerOrder/"
+    }
+  }
+}
