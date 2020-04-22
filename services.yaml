@@ -1,0 +1,8 @@
+services:
+    _defaults:
+        autowire: true
+        public: false
+
+    PaBlo\ArticleLimitPerOrder\Service\LimitationPerOrderCausedByArticle:
+        class: PaBlo\ArticleLimitPerOrder\Service\LimitationPerOrderCausedByArticle
+        public: true

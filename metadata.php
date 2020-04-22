@@ -23,6 +23,7 @@ $aModule = [
     'email' => 'info@patrick-blom.de',
     'extend' => [
     ],
+
     'blocks' => [
         [
             'template' => 'article_stock.tpl',
