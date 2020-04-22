@@ -1,0 +1,6 @@
+# PHPStorm
+/.idea/
+/.phpstorm-oxid.meta.php
+
+#PHP Unit
+Tests/reports
