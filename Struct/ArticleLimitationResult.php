@@ -4,58 +4,46 @@ declare(strict_types=1);
 
 namespace PaBlo\ArticleLimitPerOrder\Struct;
 
+use OxidEsales\Eshop\Application\Model\Article;
+
 final class ArticleLimitationResult implements LimitationResult
 {
     /**
-     * @var string
-     */
-    private $articleId;
-
-    /**
      * @var int
      */
-    private $maxAmount;
+    private $amount;
 
     /**
-     * @var bool
+     * @param int $amount
+     *
+     * @return ArticleLimitationResult
      */
-    private $limitationActive;
-
-    /**
-     * @param string $articleId
-     * @param int $maxAmount
-     * @param bool $limitationActive
-     */
-    public function __construct(string $articleId, int $maxAmount, bool $limitationActive)
+    public static function fromAmount(int $amount): self
     {
-        $this->articleId        = $articleId;
-        $this->maxAmount        = $maxAmount;
-        $this->limitationActive = $limitationActive;
+        return new self($amount);
     }
 
     /**
-     * @return string
+     * @param int $amount
      */
-    public function getArticleId(): string
+    private function __construct(int $amount)
     {
-        return $this->articleId;
+        $this->amount = $amount;
     }
 
     /**
-     * @return int
+     * {@inheritDoc}
      */
-    public function getMaxAmount(): int
+    public function limit(): int
     {
-        return $this->maxAmount;
+        return $this->amount;
     }
 
     /**
-     * @return bool
+     * {@inheritDoc}
      */
-    public function getLimitationActive(): bool
+    public function typeOf(): string
     {
-        return $this->limitationActive;
+        return Article::class;
     }
-
-
 }

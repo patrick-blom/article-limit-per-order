@@ -5,48 +5,47 @@ declare(strict_types=1);
 namespace PaBlo\ArticleLimitPerOrder\Service;
 
 use OxidEsales\Eshop\Application\Model\Article;
-use OxidEsales\Eshop\Application\Model\Contract\ArticleInterface;
+use PaBlo\ArticleLimitPerOrder\Exception\CouldNotLoadArticle;
 use PaBlo\ArticleLimitPerOrder\Struct\ArticleLimitationResult;
 use PaBlo\ArticleLimitPerOrder\Struct\LimitationResult;
-use PaBlo\ArticleLimitPerOrder\Struct\UnknownLimitationResult;
+use PaBlo\ArticleLimitPerOrder\Struct\NoLimitationResult;
 
-class LimitationPerOrderCausedByArticle
+class LimitationPerOrderCausedByArticle implements LimitationPerOrder
 {
     /**
-     * @var ArticleInterface
+     * @var Article;
      */
     private $article;
 
-    public function __construct()
+    /**
+     * @param Article $article
+     */
+    public function __construct(Article $article)
     {
-        $this->article = oxNew(Article::class);
+        $this->article = $article;
     }
 
     /**
-     * @param string $articleId
-     *
-     * @return LimitationResult
+     * {@inheritDoc}
      */
-    public function getArticleLimitation(string $articleId): LimitationResult
-    {
-        $loaded = $this->article->load($articleId);
-        if (false === $loaded) {
-            return new UnknownLimitationResult();
+    public function checkForLimit(
+        string $productId
+    ): LimitationResult {
+        if (!$this->article->load($productId)) {
+            throw new CouldNotLoadArticle(
+                'Error during load',
+                [
+                    'productId' => $productId
+                ]
+            );
         }
 
-        $articleLimitationActive = false;
-        $maxAmount               = 0;
+        $maximumOrderAmount = (int)$this->article->getFieldData('pbmaxorderlimit');
 
-        $articleOrderLimit = $this->article->getFieldData('PBMAXORDERLIMIT');
-        if ($articleOrderLimit > 0) {
-            $maxAmount               = $articleOrderLimit;
-            $articleLimitationActive = true;
+        if (0 === $maximumOrderAmount) {
+            return NoLimitationResult::create();
         }
 
-        return new ArticleLimitationResult(
-            $this->article->getProductId(),
-            $maxAmount,
-            $articleLimitationActive
-        );
+        return ArticleLimitationResult::fromAmount($maximumOrderAmount);
     }
 }

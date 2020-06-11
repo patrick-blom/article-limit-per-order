@@ -1,8 +1,14 @@
 services:
-    _defaults:
-        autowire: true
-        public: false
+  _defaults:
+    autowire: true
+    public: false
 
-    PaBlo\ArticleLimitPerOrder\Service\LimitationPerOrderCausedByArticle:
-        class: PaBlo\ArticleLimitPerOrder\Service\LimitationPerOrderCausedByArticle
-        public: true
+  PaBlo\ArticleLimitPerOrder\Validation\ArticleLimitation:
+    class: 'PaBlo\ArticleLimitPerOrder\Validation\ArticleLimitation'
+    public: true
+
+  PaBlo\ArticleLimitPerOrder\Service\LimitationPerOrderCausedByArticle:
+    class: 'PaBlo\ArticleLimitPerOrder\Service\LimitationPerOrderCausedByArticle'
+
+  OxidEsales\Eshop\Application\Model\Article:
+    class: 'OxidEsales\Eshop\Application\Model\Article'

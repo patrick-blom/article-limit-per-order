@@ -1,21 +1,22 @@
 <?php
 
+declare(strict_types=1);
+
 namespace PaBlo\ArticleLimitPerOrder\Struct;
 
 interface LimitationResult
 {
     /**
-     * @return string
-     */
-    public function getArticleId(): string;
-
-    /**
+     * Will return the amount of the limitation
+     *
      * @return int
      */
-    public function getMaxAmount(): int;
+    public function limit(): int;
 
     /**
-     * @return bool
+     * Will return the type of limitation, e.g. article caused limitation or unknown limitation etc.
+     *
+     * @return string
      */
-    public function getLimitationActive(): bool;
+    public function typeOf(): string;
 }

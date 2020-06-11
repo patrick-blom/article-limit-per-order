@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Metadata version
  */
@@ -10,25 +11,25 @@ $sMetadataVersion = '2.1';
 $aModule = [
     'id' => 'articlelimitperorder',
     'title' => [
-        'de' => 'PaBlo - Artikellimitierung pro Bestellung',
-        'en' => 'PaBlo - article limitaion per order',
+        'de' => 'PaBlo - Maximale Artikelbestellmenge pro Bestellung',
+        'en' => 'PaBlo - maximum amount of single article per order',
     ],
     'description' => [
-        'de' => 'Dieses Modul erm&ouml;glicht die Begrenzung von Artikeln pro Bestellung (Haushalts&uuml;bliche Mengen)',
-        'en' => 'This module makes it possible to limit the number of articles per order (budgetary quantities)',
+        'de' => 'Das Modul erweitert Artikeldaten um eine maximale Bestellmenge, diese kann pro Bestellung nicht überschirtten werden.',
+        'en' => 'This module extends the article structure with the maximum order amount of a single article. This amount can not be exceeded per order',
     ],
     'version' => '1.0',
     'author' => 'Patrick Blom',
     'url' => 'https://www.patrick-blom.de/',
     'email' => 'info@patrick-blom.de',
     'extend' => [
+        \OxidEsales\Eshop\Application\Component\BasketComponent::class => \PaBlo\ArticleLimitPerOrder\Application\Component\BasketComponent::class
     ],
-
     'blocks' => [
         [
             'template' => 'article_stock.tpl',
             'block' => 'admin_article_stock_form',
-            'file' => 'views/admin/blocks/article_stock__admin_article_stock_form.tpl'
+            'file' => 'Application/views/admin/blocks/article_stock__admin_article_stock_form.tpl'
         ]
     ],
     'events' => [
