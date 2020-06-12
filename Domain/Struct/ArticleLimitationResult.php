@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace PaBlo\ArticleLimitPerOrder\Struct;
+namespace PaBlo\ArticleLimitPerOrder\Domain\Struct;
 
 use OxidEsales\Eshop\Application\Model\Article;
 

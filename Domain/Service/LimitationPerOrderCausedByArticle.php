@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace PaBlo\ArticleLimitPerOrder\Service;
+namespace PaBlo\ArticleLimitPerOrder\Domain\Service;
 
-use OxidEsales\Eshop\Application\Model\Article;
-use PaBlo\ArticleLimitPerOrder\Exception\CouldNotLoadArticle;
-use PaBlo\ArticleLimitPerOrder\Struct\ArticleLimitationResult;
-use PaBlo\ArticleLimitPerOrder\Struct\LimitationResult;
-use PaBlo\ArticleLimitPerOrder\Struct\NoLimitationResult;
+use PaBlo\ArticleLimitPerOrder\Domain\Exception\CouldNotLoadArticle;
+use PaBlo\ArticleLimitPerOrder\Domain\Model\Article;
+use PaBlo\ArticleLimitPerOrder\Domain\Struct\ArticleLimitationResult;
+use PaBlo\ArticleLimitPerOrder\Domain\Struct\LimitationResult;
+use PaBlo\ArticleLimitPerOrder\Domain\Struct\NoLimitationResult;
 
 class LimitationPerOrderCausedByArticle implements LimitationPerOrder
 {

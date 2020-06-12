@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace PaBlo\ArticleLimitPerOrder\Service;
+namespace PaBlo\ArticleLimitPerOrder\Domain\Service;
 
-use PaBlo\ArticleLimitPerOrder\Exception\ModelLoadingException;
-use PaBlo\ArticleLimitPerOrder\Struct\LimitationResult;
+use PaBlo\ArticleLimitPerOrder\Domain\Exception\ModelLoadingException;
+use PaBlo\ArticleLimitPerOrder\Domain\Struct\LimitationResult;
 
 interface LimitationPerOrder
 {

@@ -2,14 +2,17 @@
 
 declare(strict_types=1);
 
-namespace PaBlo\ArticleLimitPerOrder\Validation;
+namespace PaBlo\ArticleLimitPerOrder\Middleware\Validation;
 
 use OxidEsales\Eshop\Application\Model\Basket;
 use OxidEsales\Eshop\Application\Model\BasketItem;
-use PaBlo\ArticleLimitPerOrder\Exception\ModelLoadingException;
-use PaBlo\ArticleLimitPerOrder\Service\LimitationPerOrder;
-use PaBlo\ArticleLimitPerOrder\Struct\NoLimitationResult;
+use PaBlo\ArticleLimitPerOrder\Domain\Exception\ModelLoadingException;
+use PaBlo\ArticleLimitPerOrder\Domain\Service\LimitationPerOrder;
+use PaBlo\ArticleLimitPerOrder\Domain\Struct\NoLimitationResult;
 
+/**
+ * @package PaBlo\ArticleLimitPerOrder\Middleware\Validation
+ */
 class ArticleLimitation
 {
 

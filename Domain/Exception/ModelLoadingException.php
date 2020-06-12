@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace PaBlo\ArticleLimitPerOrder\Exception;
+namespace PaBlo\ArticleLimitPerOrder\Domain\Exception;
 
 use Exception;
 

@@ -7,7 +7,7 @@ namespace PaBlo\ArticleLimitPerOrder\Application\Component;
 use OxidEsales\Eshop\Application\Model\Article;
 use OxidEsales\Eshop\Core\Registry;
 use OxidEsales\EshopCommunity\Internal\Container\ContainerFactory;
-use PaBlo\ArticleLimitPerOrder\Validation\ArticleLimitation;
+use PaBlo\ArticleLimitPerOrder\Middleware\Validation\ArticleLimitation;
 use Psr\Log\LoggerInterface;
 
 /**
