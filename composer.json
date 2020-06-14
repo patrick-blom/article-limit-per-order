@@ -20,7 +20,7 @@
         "documentation/**/*.*",
         "config.inc.TEST.php.dist"
       ],
-      "target-directory": "pb/MultiOrderMailReceiver"
+      "target-directory": "pb/ArticleLimitPerOrder"
     }
   },
   "require": {
@@ -33,7 +33,7 @@
   },
   "autoload": {
     "psr-4": {
-      "PaBlo\\MultiOrderMailReceiver\\": "../../../source/modules/pb/MultiOrderMailReceiver/"
+      "PaBlo\\ArticleLimitPerOrder\\": "../../../source/modules/pb/ArticleLimitPerOrder/"
     }
   }
 }
