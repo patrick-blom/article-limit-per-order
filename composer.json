@@ -28,7 +28,8 @@
     "oxid-esales/oxideshop-ce": "^v6.5.3"
   },
   "require-dev": {
-    "oxid-esales/testing-library": "^v7.1.0"
+    "oxid-esales/testing-library": "^v7.1.1",
+    "phpstan/phpstan": "^0.12.29"
   },
   "autoload": {
     "psr-4": {

@@ -13,7 +13,7 @@ use OxidEsales\Eshop\Application\Model\Article as oxArticle;
 final class Article implements DomainArticle
 {
     /**
-     * @var oxArticle $Article
+     * @var oxArticle $oxArticle
      */
     private $oxArticle;
 

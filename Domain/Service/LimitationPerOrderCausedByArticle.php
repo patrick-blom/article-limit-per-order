@@ -33,10 +33,7 @@ class LimitationPerOrderCausedByArticle implements LimitationPerOrder
     ): LimitationResult {
         if (!$this->article->load($productId)) {
             throw new CouldNotLoadArticle(
-                'Error during load',
-                [
-                    'productId' => $productId
-                ]
+                sprintf('article number: %s', $productId)
             );
         }
 

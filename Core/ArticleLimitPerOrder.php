@@ -2,6 +2,7 @@
 
 namespace PaBlo\ArticleLimitPerOrder\Core;
 
+use Doctrine\DBAL\Driver\ResultStatement;
 use OxidEsales\Eshop\Core\DatabaseProvider;
 use OxidEsales\Eshop\Core\DbMetaDataHandler;
 use OxidEsales\Eshop\Core\Exception\DatabaseConnectionException;
@@ -23,6 +24,7 @@ class ArticleLimitPerOrder
      */
     public static function onActivate(): void
     {
+        // @phpstan-ignore-next-line
         $dbMetaDataHandler = oxNew(DbMetaDataHandler::class);
 
         if (!$dbMetaDataHandler->fieldExists('PBMAXORDERLIMIT', 'oxarticles')) {
@@ -51,7 +53,9 @@ class ArticleLimitPerOrder
                 ]
             );
 
-        $row = $queryBuilder->execute()->fetch();
+        $statment = $queryBuilder->execute();
+        assert($statment instanceof ResultStatement);
+        $row = $statment->fetch();
 
         // deletes are only allowed by primarykey
         if (count($row) > 0 && array_key_exists('oxid', $row)) {

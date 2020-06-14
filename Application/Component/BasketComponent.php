@@ -18,6 +18,7 @@ use Psr\Log\LoggerInterface;
  * @see \OxidEsales\Eshop\Application\Component\BasketComponent
  * @mixin \OxidEsales\Eshop\Application\Component\BasketComponent
  */
+
 class BasketComponent extends BasketComponent_parent
 {
     /**
