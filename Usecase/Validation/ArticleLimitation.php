@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace PaBlo\ArticleLimitPerOrder\Middleware\Validation;
+namespace PaBlo\ArticleLimitPerOrder\Usecase\Validation;
 
 use OxidEsales\Eshop\Application\Model\Basket;
 use OxidEsales\Eshop\Application\Model\BasketItem;
@@ -11,7 +11,7 @@ use PaBlo\ArticleLimitPerOrder\Domain\Service\LimitationPerOrder;
 use PaBlo\ArticleLimitPerOrder\Domain\Struct\NoLimitationResult;
 
 /**
- * @package PaBlo\ArticleLimitPerOrder\Middleware\Validation
+ * @package PaBlo\ArticleLimitPerOrder\Usecase\Validation
  */
 class ArticleLimitation
 {

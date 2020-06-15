@@ -8,7 +8,7 @@ use OxidEsales\Eshop\Application\Model\Article;
 use OxidEsales\Eshop\Core\Exception\StandardException;
 use OxidEsales\Eshop\Core\Registry;
 use OxidEsales\EshopCommunity\Internal\Container\ContainerFactory;
-use PaBlo\ArticleLimitPerOrder\Middleware\Validation\ArticleLimitation;
+use PaBlo\ArticleLimitPerOrder\Usecase\Validation\ArticleLimitation;
 use Psr\Container\ContainerInterface;
 use Psr\Log\LoggerInterface;
 

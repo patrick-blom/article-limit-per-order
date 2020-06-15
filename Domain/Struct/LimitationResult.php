@@ -12,11 +12,4 @@ interface LimitationResult
      * @return int
      */
     public function limit(): int;
-
-    /**
-     * Will return the type of limitation, e.g. article caused limitation or unknown limitation etc.
-     *
-     * @return string
-     */
-    public function typeOf(): string;
 }

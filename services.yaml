@@ -3,15 +3,15 @@ services:
     autowire: true
     public: false
 
-  PaBlo\ArticleLimitPerOrder\Middleware\Validation\ArticleLimitation:
-    class: 'PaBlo\ArticleLimitPerOrder\Middleware\Validation\ArticleLimitation'
+  PaBlo\ArticleLimitPerOrder\Usecase\Validation\ArticleLimitation:
+    class: 'PaBlo\ArticleLimitPerOrder\Usecase\Validation\ArticleLimitation'
     public: true
 
   PaBlo\ArticleLimitPerOrder\Domain\Service\LimitationPerOrderCausedByArticle:
     class: 'PaBlo\ArticleLimitPerOrder\Domain\Service\LimitationPerOrderCausedByArticle'
 
-  PaBlo\ArticleLimitPerOrder\Middleware\Model\Article:
-    class: 'PaBlo\ArticleLimitPerOrder\Middleware\Model\Article'
+  PaBlo\ArticleLimitPerOrder\Usecase\Model\Article:
+    class: 'PaBlo\ArticleLimitPerOrder\Usecase\Model\Article'
 
   OxidEsales\Eshop\Application\Model\Article:
     class: 'OxidEsales\Eshop\Application\Model\Article'

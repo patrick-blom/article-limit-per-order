@@ -6,8 +6,6 @@ namespace PaBlo\ArticleLimitPerOrder\Domain\Struct;
 
 final class NoLimitationResult implements LimitationResult
 {
-    private const NOLIMIT = 'nolimit';
-
     /**
      * @return NoLimitationResult
      */
@@ -26,13 +24,5 @@ final class NoLimitationResult implements LimitationResult
     public function limit(): int
     {
         return 0;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function typeOf(): string
-    {
-        return self::NOLIMIT;
     }
 }

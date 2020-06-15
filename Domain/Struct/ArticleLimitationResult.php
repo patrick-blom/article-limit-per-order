@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace PaBlo\ArticleLimitPerOrder\Domain\Struct;
 
-use OxidEsales\Eshop\Application\Model\Article;
-
 final class ArticleLimitationResult implements LimitationResult
 {
     /**
@@ -37,13 +35,5 @@ final class ArticleLimitationResult implements LimitationResult
     public function limit(): int
     {
         return $this->amount;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function typeOf(): string
-    {
-        return Article::class;
     }
 }
