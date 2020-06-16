@@ -10,7 +10,7 @@ use PaBlo\ArticleLimitPerOrder\Core\ArticleLimitPerOrder;
 
 
 /**
- * Class ArticleLimitPerOrder
+ * Class ArticleLimitPerOrderTest
  * UNIT/INTEGRATION tests for core class ArticleLimitPerOrder.
  *
  * @package PaBlo\ArticleLimitPerOrder\Tests\Integration\Core
