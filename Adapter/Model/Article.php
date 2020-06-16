@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace PaBlo\ArticleLimitPerOrder\Usecase\Model;
+namespace PaBlo\ArticleLimitPerOrder\Adapter\Model;
 
 use PaBlo\ArticleLimitPerOrder\Domain\Model\Article as DomainArticle;
 use OxidEsales\Eshop\Application\Model\Article as oxArticle;
 
 /**
- * @package PaBlo\ArticleLimitPerOrder\Usecase\Model
+ * @package PaBlo\ArticleLimitPerOrder\Adapter\Model
  */
 class Article implements DomainArticle
 {

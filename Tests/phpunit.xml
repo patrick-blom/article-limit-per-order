@@ -18,7 +18,7 @@
             <directory suffix=".php">../Core</directory>
             <directory suffix=".php">../Application/Component</directory>
             <directory suffix=".php">../Domain</directory>
-            <directory suffix=".php">../Usecase</directory>
+            <directory suffix=".php">../Adapter</directory>
         </whitelist>
     </filter>
 </phpunit>

@@ -1,17 +1,17 @@
 <?php
 
 
-namespace PaBlo\ArticleLimitPerOrder\Tests\Unit\Usecase\Model;
+namespace PaBlo\ArticleLimitPerOrder\Tests\Unit\Adapter\Model;
 
 
 use OxidEsales\TestingLibrary\UnitTestCase;
-use PaBlo\ArticleLimitPerOrder\Usecase\Model\Article;
+use PaBlo\ArticleLimitPerOrder\Adapter\Model\Article;
 
 /**
  * Class ArticleTest
  * UNIT/INTEGRATION tests for model class Article.
  *
- * @package PaBlo\ArticleLimitPerOrder\Tests\Unit\Usecase\Model
+ * @package PaBlo\ArticleLimitPerOrder\Tests\Unit\Adapter\Model
  */
 class ArticleTest extends UnitTestCase
 {
@@ -42,7 +42,7 @@ class ArticleTest extends UnitTestCase
     }
 
     /**
-     * @covers \PaBlo\ArticleLimitPerOrder\Usecase\Model\Article::__construct
+     * @covers \PaBlo\ArticleLimitPerOrder\Adapter\Model\Article::__construct
      */
     public function test_constructor_works_as_expected(): void
     {
@@ -53,7 +53,7 @@ class ArticleTest extends UnitTestCase
     }
 
     /**
-     * @covers \PaBlo\ArticleLimitPerOrder\Usecase\Model\Article::load
+     * @covers \PaBlo\ArticleLimitPerOrder\Adapter\Model\Article::load
      */
     public function test_loading_the_model_will_return_a_boolean(): void
     {
@@ -72,7 +72,7 @@ class ArticleTest extends UnitTestCase
     }
 
     /**
-     * @covers \PaBlo\ArticleLimitPerOrder\Usecase\Model\Article::getFieldData
+     * @covers \PaBlo\ArticleLimitPerOrder\Adapter\Model\Article::getFieldData
      */
     public function test_model_returns_expected_field_data(): void
     {
