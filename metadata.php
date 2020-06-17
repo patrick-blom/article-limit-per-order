@@ -34,6 +34,5 @@ $aModule = [
     ],
     'events' => [
         'onActivate' => '\PaBlo\ArticleLimitPerOrder\Core\ArticleLimitPerOrder::onActivate',
-        'onDeactivate' => '\PaBlo\ArticleLimitPerOrder\Core\ArticleLimitPerOrder::onDeactivate'
     ]
 ];

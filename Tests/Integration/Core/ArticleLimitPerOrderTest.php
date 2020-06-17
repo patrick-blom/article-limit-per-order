@@ -47,32 +47,4 @@ class ArticleLimitPerOrderTest extends UnitTestCase
         $this->SUT::onActivate();
         $this->assertTrue($dbMetaDataHandler->fieldExists('PBMAXORDERLIMIT', 'oxarticles'));
     }
-
-    /**
-     * @covers \PaBlo\ArticleLimitPerOrder\Core\ArticleLimitPerOrder::onDeactivate
-     */
-    public function test_onDeactivate_will_remove_template_blocks(): void
-    {
-        $container = ContainerFactory::getInstance()->getContainer();
-
-        // ensure the module is active
-        /** @var QueryBuilderFactoryInterface $queryBuilderFactory */
-        $queryBuilderFactory = $container->get(QueryBuilderFactoryInterface::class);
-
-        $queryBuilder = $queryBuilderFactory->create();
-        $queryBuilder->select('oxid')
-            ->from('oxtplblocks', 'tpl')
-            ->where('tpl.oxmodule = :moduleId')
-            ->setParameters([
-                                'moduleId' => 'articlelimitperorder'
-                            ]);
-
-        $result = $queryBuilder->execute()->fetchAll();
-        $this->assertCount(1, $result);
-
-        $this->SUT::onDeactivate();
-
-        $result = $queryBuilder->execute()->fetchAll();
-        $this->assertCount(0, $result);
-    }
 }

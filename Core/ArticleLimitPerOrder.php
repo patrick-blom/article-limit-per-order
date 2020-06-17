@@ -33,40 +33,4 @@ class ArticleLimitPerOrder
             );
         }
     }
-
-    /**
-     * Ensures that the template blocks will be cleared on module deactivation.
-     */
-    public static function onDeactivate(): void
-    {
-        $container = ContainerFactory::getInstance()->getContainer();
-        /** @var QueryBuilderFactoryInterface $queryBuilderFactory */
-        $queryBuilderFactory = $container->get(QueryBuilderFactoryInterface::class);
-        $queryBuilder = $queryBuilderFactory->create();
-
-        $queryBuilder->select('oxid')
-            ->from('oxtplblocks')
-            ->where('oxmodule = :moduleId')
-            ->setParameters(
-                [
-                    'moduleId' => 'articlelimitperorder'
-                ]
-            );
-
-        $statment = $queryBuilder->execute();
-        assert($statment instanceof ResultStatement);
-        $row = $statment->fetch();
-
-        // deletes are only allowed by primarykey
-        if (count($row) > 0 && array_key_exists('oxid', $row)) {
-            $queryBuilder->delete('oxtplblocks')
-                ->where('oxid = :id')
-                ->setParameters(
-                    [
-                        'id' => $row['oxid']
-                    ]
-                );
-            $queryBuilder->execute();
-        }
-    }
 }
