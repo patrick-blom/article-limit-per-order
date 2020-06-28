@@ -3,5 +3,6 @@ parameters:
     paths:
         - ./
     excludes_analyse:
-            - Application/Component/BasketComponent.php
+            - Infrastructure/*
+            - Tests/*
             - metadata.php

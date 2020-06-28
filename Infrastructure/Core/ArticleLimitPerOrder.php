@@ -1,18 +1,15 @@
 <?php
 
-namespace PaBlo\ArticleLimitPerOrder\Core;
+namespace PaBlo\ArticleLimitPerOrder\Infrastructure\Core;
 
-use Doctrine\DBAL\Driver\ResultStatement;
 use OxidEsales\Eshop\Core\DatabaseProvider;
 use OxidEsales\Eshop\Core\DbMetaDataHandler;
 use OxidEsales\Eshop\Core\Exception\DatabaseConnectionException;
 use OxidEsales\Eshop\Core\Exception\DatabaseErrorException;
-use OxidEsales\EshopCommunity\Internal\Container\ContainerFactory;
-use OxidEsales\EshopCommunity\Internal\Framework\Database\QueryBuilderFactoryInterface;
 
 /**
  * Class ArticleLimitPerOrder
- * @package PaBlo\ArticleLimitPerOrder\Core
+ * @package PaBlo\ArticleLimitPerOrder\Infrastructure\Core
  */
 class ArticleLimitPerOrder
 {

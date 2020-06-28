@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace PaBlo\ArticleLimitPerOrder\Application\Component;
+namespace PaBlo\ArticleLimitPerOrder\Infrastructure\Application\Component;
 
 use OxidEsales\Eshop\Application\Model\Article;
 use OxidEsales\Eshop\Core\Exception\StandardException;
@@ -14,7 +14,7 @@ use Psr\Log\LoggerInterface;
 
 /**
  * Class BasketComponent
- * @package PaBlo\ArticleLimitPerOrder\Component
+ * @package PaBlo\ArticleLimitPerOrder\Infrastructure\Component
  * @see \OxidEsales\Eshop\Application\Component\BasketComponent
  * @mixin \OxidEsales\Eshop\Application\Component\BasketComponent
  */

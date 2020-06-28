@@ -1,7 +1,7 @@
 <?php
 
 
-namespace PaBlo\ArticleLimitPerOrder\Tests\Integration\Application\Component;
+namespace PaBlo\ArticleLimitPerOrder\Tests\Integration\Infrastructure\Application\Component;
 
 use OxidEsales\TestingLibrary\UnitTestCase;
 

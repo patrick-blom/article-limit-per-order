@@ -12,6 +12,6 @@ services:
 
   PaBlo\ArticleLimitPerOrder\Adapter\Model\Article:
     class: 'PaBlo\ArticleLimitPerOrder\Adapter\Model\Article'
-
-  OxidEsales\Eshop\Application\Model\Article:
-    class: 'OxidEsales\Eshop\Application\Model\Article'
+    arguments:
+      - !service
+          class: 'OxidEsales\Eshop\Application\Model\Article'

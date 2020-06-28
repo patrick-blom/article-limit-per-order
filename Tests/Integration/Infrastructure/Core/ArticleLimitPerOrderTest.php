@@ -1,12 +1,10 @@
 <?php
 
-namespace PaBlo\ArticleLimitPerOrder\Tests\Integration\Core;
+namespace PaBlo\ArticleLimitPerOrder\Tests\Integration\Infrastructure\Core;
 
 use OxidEsales\Eshop\Core\DbMetaDataHandler;
-use OxidEsales\EshopCommunity\Internal\Container\ContainerFactory;
-use OxidEsales\EshopCommunity\Internal\Framework\Database\QueryBuilderFactoryInterface;
 use OxidEsales\TestingLibrary\UnitTestCase;
-use PaBlo\ArticleLimitPerOrder\Core\ArticleLimitPerOrder;
+use PaBlo\ArticleLimitPerOrder\Infrastructure\Core\ArticleLimitPerOrder;
 
 
 /**
@@ -35,7 +33,7 @@ class ArticleLimitPerOrderTest extends UnitTestCase
     }
 
     /**
-     * @covers \PaBlo\ArticleLimitPerOrder\Core\ArticleLimitPerOrder::onActivate
+     * @covers \PaBlo\ArticleLimitPerOrder\Infrastructure\Core\ArticleLimitPerOrder::onActivate
      */
     public function test_onActivate_will_add_custom_field_to_the_database(): void
     {
