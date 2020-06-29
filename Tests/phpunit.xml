@@ -16,7 +16,6 @@
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
             <directory suffix=".php">../Infrastructure/Core</directory>
-            <directory suffix=".php">../Infrastructure/Application/Component</directory>
             <directory suffix=".php">../Domain</directory>
             <directory suffix=".php">../Adapter</directory>
         </whitelist>
