@@ -1,3 +1,9 @@
+[![PHP Version](https://flat.badgen.net/packagist/php/patrick-blom/article-limit-per-order/?cache=300&scale=1.1)](https://github.com/patrick-blom/article-limit-per-order)
+[![Stable Version](https://flat.badgen.net/packagist/v/patrick-blom/article-limit-per-order/latest/?label=latest&cache=300&scale=1.1)](https://packagist.org/packages/patrick-blom/article-limit-per-order)
+[![Package Name](https://flat.badgen.net/packagist/name/patrick-blom/article-limit-per-order/?label=packagist&cache=300&scale=1.1)](https://packagist.org/packages/patrick-blom/article-limit-per-order)
+[![License](https://flat.badgen.net/packagist/license/patrick-blom/article-limit-per-order/?label=license&cache=300&scale=1.1)](https://github.com/patrick-blom/article-limit-per-order/blob/master/LICENSE)
+[![Follow me on twitter](https://flat.badgen.net/twitter/follow/pbl0m/?label=@pbl0m&cache=300&scale=1.1)](https://twitter.com/pbl0m)
+
 Article Limit Per Order
 ==================
 
