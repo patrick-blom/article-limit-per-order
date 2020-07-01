@@ -4,3 +4,5 @@
 
 #PHP Unit
 Tests/reports
+Tests/Codeception/_output/*.html
+Tests/Codeception/_output/*.png
